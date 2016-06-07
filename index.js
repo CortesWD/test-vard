@@ -99,5 +99,5 @@ router.get('/', function (req, res, next) {
 
 	//get as formatted string
 	console.log(vCard.getFormattedString());
-	res.send('hola');
+	res.send('<pre>'+vCard.getFormattedString()+'</pre>');
 });
