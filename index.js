@@ -95,9 +95,9 @@ router.get('/', function (req, res, next) {
 	vCard.version = '3.0'; //can also support 2.1 and 4.0, certain versions only support certain fields
 
 	//save to file
-	vCard.saveToFile('./eric-nesser.vcf');
+	// vCard.saveToFile('./eric-nesser.vcf');
 
 	//get as formatted string
-	console.log(vCard.getFormattedString());
+	// console.log(vCard.getFormattedString());
 	res.send('hola');
 });
