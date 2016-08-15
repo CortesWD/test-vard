@@ -105,6 +105,6 @@ router.get('/', function (req, res, next) {
 	res.render('index', { title: 'Crispin VCard'});
 });
 
-router.get('/video', function (req, res) {
+router.get('/video', function (req, res, next) {
 	res.render('video');
 })
