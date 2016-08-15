@@ -1,12 +1,11 @@
 var express = require('express');
-// var pug     = require('pug');
+var pug     = require('pug');
 var router  = express.Router();
 var app     = express();
-
-  app.use(router);
-  app.use(express.static('public'));
-// module.exports = function (app) {
-// };
+	app.use(router);
+app.set('views', __dirname + '/views')
+app.use(express.static(__dirname + '/public'))
+app.set('view engine', 'pug');
 
 
 app.listen(process.env.PORT || 5000);
@@ -106,6 +105,6 @@ router.get('/', function (req, res, next) {
 	res.render('index', { title: 'Crispin VCard'});
 });
 
-router.get('/video', function () {
+router.get('/video', function (req, res) {
 	res.render('video');
 })
