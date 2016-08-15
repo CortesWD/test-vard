@@ -105,3 +105,7 @@ router.get('/', function (req, res, next) {
 	// res.send('<pre>'+vCard.getFormattedString()+'</pre>');
 	res.render('index', { title: 'Crispin VCard'});
 });
+
+router.get('/video', function () {
+	res.render('video');
+})
